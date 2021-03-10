@@ -15,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 
+import com.berthms.ui.utils.AppConst;
 import com.gmail.teo.backend.data.Role;
 import com.gmail.teo.backend.data.entity.User;
 import com.gmail.teo.backend.repositories.UserRepository;
@@ -35,7 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	private static final String LOGIN_PROCESSING_URL = "/login";
 	private static final String LOGIN_FAILURE_URL = "/login?error";
 	private static final String LOGIN_URL = "/login";
-	private static final String LOGOUT_SUCCESS_URL = "/" + BakeryConst.PAGE_STOREFRONT;
+	private static final String LOGOUT_SUCCESS_URL = "/" + AppConst.PAGE_ROOT;
 
 	private final UserDetailsService userDetailsService;
 
