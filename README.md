@@ -60,7 +60,7 @@
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.java<br>
  ┃ ┃ ┃ ┃ ┃ ┣ 📂views<br>
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin<br>
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.java<br>
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard<br>
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.java<br>
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.java<br>
