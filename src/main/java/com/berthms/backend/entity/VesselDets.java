@@ -1,15 +1,7 @@
 package com.berthms.backend.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-//import org.springframework.data.annotation.CreatedDate;
-//import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-//import java.util.Date;
-
 
 @Entity
 @Table(name = "vessel")
@@ -43,17 +35,6 @@ public class VesselDets {
         @Column(name="VOYAGE_CODE_INBOUND")
         private String VOYAGE_CODE_INBOUND;//Incoming Voyage number (equivalent to "flight number" in flight schedule)
         
-        // @Column(nullable = false, updatable = false)
-        // @Temporal(TemporalType.TIMESTAMP)
-        // @CreatedDate
-        // private Date createdAt;
-
-        // @Column(nullable = false)
-        // @Temporal(TemporalType.TIMESTAMP)
-        // @LastModifiedDate
-        // private Date updatedAt;
-
-
 		public String getAVG_SPEED() {
 			return AVG_SPEED;
 		}
@@ -109,21 +90,7 @@ public class VesselDets {
 			VSL_VOY = vSL_VOY;
 		}
 
-        // public Date getCreatedAt() {
-        //     return createdAt;
-        // }
-    
-        // public void setCreatedAt(Date createdAt) {
-        //     this.createdAt = createdAt;
-        // }
-    
-        // public Date getUpdatedAt() {
-        //     return updatedAt;
-        // }
-    
-        // public void setUpdatedAt(Date updatedAt) {
-        //     this.updatedAt = updatedAt;
-        // }
+        
 
 		@Override
 		public String toString() {

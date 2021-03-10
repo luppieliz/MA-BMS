@@ -1,23 +1,20 @@
 package com.berthms.backend.entity;
 
+
+
 import java.io.Serializable;
 
 import javax.persistence.*;
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
 import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "records")
 @IdClass(VesselID.class)
 public class Vessel implements Serializable{
-
 
 	@Id
 	@NotBlank

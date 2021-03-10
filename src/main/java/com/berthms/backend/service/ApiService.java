@@ -72,7 +72,7 @@ public class ApiService {
             con.setRequestProperty("Apikey", "8f765e3bf8534243bceeb5341a78f5f2");
             con.setRequestProperty("Content-Type", "application/json");
             con.setDoOutput(true);
-            String jsonInputString = "{\"dateFrom\": \"2021-03-09\", \"dateTo\":\"2021-03-12\"}";
+            String jsonInputString = "{\"dateFrom\": \"2021-03-11\", \"dateTo\":\"2021-03-14\"}";
 
             try (OutputStream os = con.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes("utf-8");
@@ -94,9 +94,14 @@ public class ApiService {
                     String vslVoy = (a.getFullVslM() + a.getInVoyN()).replace(" ", "");
                     String url2 = "https://api.portnet.com/extapi/vessels/predictedbtr/?vslvoy=" + vslVoy;
                     VesselDets vesselDets = this.getData(url2);
-                    vesselDetsRepository.save(vesselDets);
-                    Thread.sleep(300);
                     vesselRepository.save(a);
+                    try{
+                        vesselDetsRepository.save(vesselDets);
+                    } catch (Exception e){
+        
+                    }
+                    Thread.sleep(300);
+                    
                 }
 
                 return output.getResult();
@@ -112,4 +117,5 @@ public class ApiService {
 
         return output.getResult();
     }
+
 }
