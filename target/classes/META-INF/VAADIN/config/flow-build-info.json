@@ -1,0 +1,9 @@
+{
+  "compatibilityMode": false,
+  "productionMode": false,
+  "npmFolder": "/Users/jayden/Documents/Projects/Berth-Management-System",
+  "generatedFolder": "/Users/jayden/Documents/Projects/Berth-Management-System/target/frontend",
+  "frontendFolder": "/Users/jayden/Documents/Projects/Berth-Management-System/frontend",
+  "pnpm.enable": false,
+  "require.home.node": false
+}
