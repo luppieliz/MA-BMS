@@ -11,14 +11,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @EnableJpaRepositories
-public interface VesselDetsRepository extends JpaRepository<VesselDets, Long> {
+public interface VesselDetsRepository extends JpaRepository<VesselDets, String> {
 
-    @Query("select u from VesselDets u where u.VESSEL_NAME = ?1 and u.VOYAGE_CODE_INBOUND = ?2")
-    VesselDets findByVesselNameandInVoyNo(String fullVslM , String inVoyN);
-
-    @Query("select u from VesselDets u where u.VSL_VOY = ?1")
-    VesselDets findByVesselNameandInVoyNo(String vslVoy);
-
+    VesselDets findByVSL_VOY(String vSL_VOY);
     
 }
 

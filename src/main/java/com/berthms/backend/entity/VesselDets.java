@@ -15,13 +15,13 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "vessel")
 @NamedQuery(name = "VesselDets.findByVesselNameandinVoyN",
    query = "select u from VesselDets u where u.VESSEL_NAME = ?1 and u.VOYAGE_CODE_INBOUND = ?2")
+   
+@NamedQuery(name = "VesselDets.findByVSL_VOY",
+    query = "select u from VesselDets u where u.VSL_VOY = ?1")
 
 public class VesselDets {
-        @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    	@Column(name = "vid",unique=true, nullable = false)
-		private long vid;
-	
-        private String VSL_VOY; //Parameter that was used for the query
+        @Id 
+		private String VSL_VOY; //Parameter that was used for the query
         
         @Column(name="AVG_SPEED")
         private String AVG_SPEED;//Average speed of the vessel
@@ -139,6 +139,7 @@ public class VesselDets {
 					+ ", VESSEL_NAME=" + VESSEL_NAME + ", VOYAGE_CODE_INBOUND=" + VOYAGE_CODE_INBOUND + ", VSL_VOY="
 					+ VSL_VOY + "]";
 		}
+	
     
 }
 

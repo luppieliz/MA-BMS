@@ -1,9 +1,9 @@
 {
   "compatibilityMode": false,
   "productionMode": false,
-  "npmFolder": "/Users/jayden/Documents/Projects/Berth-Management-System",
-  "generatedFolder": "/Users/jayden/Documents/Projects/Berth-Management-System/target/frontend",
-  "frontendFolder": "/Users/jayden/Documents/Projects/Berth-Management-System/frontend",
+  "npmFolder": "/Users/jayden/Documents/Projects/MA-BMS",
+  "generatedFolder": "/Users/jayden/Documents/Projects/MA-BMS/target/frontend",
+  "frontendFolder": "/Users/jayden/Documents/Projects/MA-BMS/frontend",
   "pnpm.enable": false,
   "require.home.node": false
 }
