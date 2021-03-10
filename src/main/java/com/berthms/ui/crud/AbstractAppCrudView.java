@@ -10,7 +10,7 @@ import com.vaadin.flow.router.OptionalParameter;
 import com.berthms.app.security.CurrentUser;
 import com.berthms.backend.entity.AbstractEntity;
 import com.berthms.backend.entity.util.EntityUtil;
-import com.berthms.backend.service.FilterableCrudService;
+import com.berthms.backend.service.UserService.FilterableCrudService;
 import com.berthms.ui.component.SearchBar;
 import com.berthms.ui.utils.TemplateUtil;
 import com.berthms.ui.views.HasNotifications;

@@ -3,7 +3,7 @@ package com.berthms.ui.crud;
 import java.util.List;
 
 import com.berthms.backend.entity.AbstractEntity;
-import com.berthms.backend.service.FilterableCrudService;
+import com.berthms.backend.service.UserService.FilterableCrudService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.vaadin.artur.spring.dataprovider.FilterablePageableDataProvider;

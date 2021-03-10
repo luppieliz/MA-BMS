@@ -21,7 +21,7 @@ import com.vaadin.flow.router.Route;
 import com.berthms.app.security.CurrentUser;
 import com.berthms.backend.entity.Role;
 import com.berthms.backend.entity.User;
-import com.berthms.backend.service.UserService;
+import com.berthms.backend.service.UserService.UserService;
 import com.berthms.ui.MainView;
 import com.berthms.ui.crud.AbstractAppCrudView;
 import com.berthms.ui.utils.AppConst;

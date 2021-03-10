@@ -27,7 +27,7 @@ import com.vaadin.flow.router.AfterNavigationObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
-
+import com.berthms.backend.service.VesselDetsService.VesselDetsService;
 import com.berthms.ui.MainView;
 
 @Route(value = "dashboard", layout = MainView.class)
@@ -44,6 +44,8 @@ public class DashboardView extends Div implements AfterNavigationObserver {
     private final H2 usersH2 = new H2();
     private final H2 eventsH2 = new H2();
     private final H2 conversionH2 = new H2();
+    private VesselDetsService vesselDetsService;
+
 
     public DashboardView() {
         setId("dashboard-view");

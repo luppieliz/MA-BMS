@@ -2,6 +2,8 @@ package com.berthms.backend.repository;
 
 import java.util.List;
 import com.berthms.backend.entity.VesselDets;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
  
 
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -11,7 +13,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @EnableJpaRepositories
 public interface VesselDetsRepository extends JpaRepository<VesselDets, String> {
 
-    // VesselDets findByVSL_VOY(String vSL_VOY);
+    VesselDets findByVSL_VOY(String vSL_VOY);
+    Page<VesselDets> findBy(Pageable pageable);
     
 }
 
