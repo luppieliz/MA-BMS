@@ -12,10 +12,29 @@ import java.net.*;
 import com.google.gson.Gson;
 
 import java.util.List;
+//scheduled
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 @RestController
 @RequestMapping("/api")
 public class ApiService {
+	
+	private static final Logger log = LoggerFactory.getLogger(ApiService.class);
+
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+
+	@Scheduled(cron = "0 * * * * ?")
+	public void reportCurrentTime() {
+		log.info("{}: This is a minute message from apiService", dateFormat.format(new Date()));
+        CurrentDateTime current = new CurrentDateTime();
+        log.info("{\"dateFrom\": " + "\"" + current.currentDate() + "\""+  ", \"dateTo\":" + "\"" + current.oneWeek() + "\"}");
+    }
 
     @Autowired
     VesselRepository vesselRepository;
@@ -72,7 +91,8 @@ public class ApiService {
             con.setRequestProperty("Apikey", "8f765e3bf8534243bceeb5341a78f5f2");
             con.setRequestProperty("Content-Type", "application/json");
             con.setDoOutput(true);
-            String jsonInputString = "{\"dateFrom\": \"2021-03-11\", \"dateTo\":\"2021-03-14\"}";
+            CurrentDateTime current = new CurrentDateTime();
+            String jsonInputString = "{\"dateFrom\": " + "\"" + current.currentDate() + "\""+  ", \"dateTo\":" + "\"" + current.oneWeek() + "\"}";
 
             try (OutputStream os = con.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes("utf-8");
@@ -94,14 +114,13 @@ public class ApiService {
                     String vslVoy = (a.getFullVslM() + a.getInVoyN()).replace(" ", "");
                     String url2 = "https://api.portnet.com/extapi/vessels/predictedbtr/?vslvoy=" + vslVoy;
                     VesselDets vesselDets = this.getData(url2);
-                    vesselRepository.save(a);
-                    try{
+                    try {
                         vesselDetsRepository.save(vesselDets);
-                    } catch (Exception e){
-        
+                    } catch (Exception e) {
+                        log.warn("Vessel problem encountered");
                     }
                     Thread.sleep(300);
-                    
+                    vesselRepository.save(a);
                 }
 
                 return output.getResult();
@@ -116,6 +135,13 @@ public class ApiService {
         }
 
         return output.getResult();
+    }
+
+    
+	@Scheduled(cron = "0 36 17 * * ?")
+	public void scheduledPostData() {
+        postData();
+		log.info("{}: Post data successfully ran.", dateFormat.format(new Date()));
     }
 
 }
