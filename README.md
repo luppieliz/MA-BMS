@@ -4,192 +4,192 @@
 
 ### "src" Folder
 
-📦src
- ┣ 📂main
- ┃ ┣ 📂java
- ┃ ┃ ┣ 📂com
- ┃ ┃ ┃ ┣ 📂berthms
- ┃ ┃ ┃ ┃ ┣ 📂app
- ┃ ┃ ┃ ┃ ┃ ┣ 📂security
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜HasLogger.java
- ┃ ┃ ┃ ┃ ┣ 📂backend
- ┃ ┃ ┃ ┃ ┃ ┣ 📂controller
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂entity
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂util
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂repository
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📂service
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.java
- ┃ ┃ ┃ ┃ ┣ 📂ui
- ┃ ┃ ┃ ┃ ┃ ┣ 📂component
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂crud
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂exceptions
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂utils
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂messages
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📂views
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin
+📦src<br>
+ ┣ 📂main<br>
+ ┃ ┣ 📂java<br>
+ ┃ ┃ ┣ 📂com<br>
+ ┃ ┃ ┃ ┣ 📂berthms<br>
+ ┃ ┃ ┃ ┃ ┣ 📂app<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂security<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasLogger.java<br>
+ ┃ ┃ ┃ ┃ ┣ 📂backend<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂controller<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂entity<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂util<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂repository<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂service<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.java<br>
+ ┃ ┃ ┃ ┃ ┣ 📂ui<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂component<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂crud<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂exceptions<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂utils<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂messages<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂views<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin<br>
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂errors
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂login
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AdminView.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜MainView.java
- ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┃ ┗ 📜Application.java
- ┃ ┃ ┃ ┗ 📜.DS_Store
- ┃ ┃ ┗ 📜.DS_Store
- ┃ ┣ 📂resources
- ┃ ┃ ┣ 📂META-INF
- ┃ ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┃ ┗ 📂icons
- ┃ ┃ ┃ ┃ ┃ ┗ 📜icon.png
- ┃ ┃ ┣ 📂static
- ┃ ┃ ┃ ┗ 📂css
- ┃ ┃ ┃ ┃ ┗ 📜.DS_Store
- ┃ ┃ ┗ 📜application.properties
- ┃ ┗ 📜.DS_Store
- ┣ 📂test
- ┃ ┗ 📜.DS_Store
- ┗ 📜.DS_Store'
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂errors<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂login<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AdminView.java<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MainView.java<br>
+ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┃ ┗ 📜Application.java<br>
+ ┃ ┃ ┃ ┗ 📜.DS_Store<br>
+ ┃ ┃ ┗ 📜.DS_Store<br>
+ ┃ ┣ 📂resources<br>
+ ┃ ┃ ┣ 📂META-INF<br>
+ ┃ ┃ ┃ ┗ 📂resources<br>
+ ┃ ┃ ┃ ┃ ┗ 📂icons<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜icon.png<br>
+ ┃ ┃ ┣ 📂static<br>
+ ┃ ┃ ┃ ┗ 📂css<br>
+ ┃ ┃ ┃ ┃ ┗ 📜.DS_Store<br>
+ ┃ ┃ ┗ 📜application.properties<br>
+ ┃ ┗ 📜.DS_Store<br>
+ ┣ 📂test<br>
+ ┃ ┗ 📜.DS_Store<br>
+ ┗ 📜.DS_Store'<br>
 
  ### "target" Folder
- 
- 📦target
- ┣ 📂classes
- ┃ ┣ 📂META-INF
- ┃ ┃ ┣ 📂VAADIN
- ┃ ┃ ┃ ┗ 📂config
- ┃ ┃ ┃ ┃ ┗ 📜flow-build-info.json
- ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┗ 📂icons
- ┃ ┃ ┃ ┃ ┗ 📜icon.png
- ┃ ┣ 📂com
- ┃ ┃ ┣ 📂berthms
- ┃ ┃ ┃ ┣ 📂app
- ┃ ┃ ┃ ┃ ┣ 📂security
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.class
- ┃ ┃ ┃ ┃ ┗ 📜HasLogger.class
- ┃ ┃ ┃ ┣ 📂backend
- ┃ ┃ ┃ ┃ ┣ 📂controller
- ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.class
- ┃ ┃ ┃ ┃ ┣ 📂entity
- ┃ ┃ ┃ ┃ ┃ ┣ 📂util
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜User.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.class
- ┃ ┃ ┃ ┃ ┣ 📂repository
- ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.class
- ┃ ┃ ┃ ┃ ┗ 📂service
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.class
- ┃ ┃ ┃ ┣ 📂ui
- ┃ ┃ ┃ ┃ ┣ 📂component
- ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$FilterChanged.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$Model.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$SearchValueChanged.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.class
- ┃ ┃ ┃ ┃ ┣ 📂crud
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.class
- ┃ ┃ ┃ ┃ ┣ 📂exceptions
- ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.class
- ┃ ┃ ┃ ┃ ┣ 📂utils
- ┃ ┃ ┃ ┃ ┃ ┣ 📂messages
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.class
- ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.class
- ┃ ┃ ┃ ┃ ┣ 📂views
- ┃ ┃ ┃ ┃ ┃ ┣ 📂admin
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.class
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.class
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📂errors
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.class
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📂login
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.class
- ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.class
- ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┃ ┣ 📜AdminView.class
- ┃ ┃ ┃ ┃ ┗ 📜MainView.class
- ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┗ 📜Application.class
- ┃ ┃ ┗ 📜.DS_Store
- ┃ ┣ 📜.DS_Store
- ┃ ┗ 📜application.properties
- ┣ 📂frontend
- ┃ ┗ 📜generated-flow-imports.js
- ┣ 📂maven-archiver
- ┃ ┗ 📜pom.properties
- ┣ 📂maven-status
- ┃ ┗ 📂maven-compiler-plugin
- ┃ ┃ ┗ 📂compile
- ┃ ┃ ┃ ┗ 📂default-compile
- ┃ ┃ ┃ ┃ ┣ 📜createdFiles.lst
- ┃ ┃ ┃ ┃ ┗ 📜inputFiles.lst
- ┣ 📂test-classes
- ┣ 📜berth-management-system-1.0-SNAPSHOT.jar
- ┗ 📜berth-management-system-1.0-SNAPSHOT.jar.original
+
+ 📦target<br>
+ ┣ 📂classes<br>
+ ┃ ┣ 📂META-INF<br>
+ ┃ ┃ ┣ 📂VAADIN<br>
+ ┃ ┃ ┃ ┗ 📂config<br>
+ ┃ ┃ ┃ ┃ ┗ 📜flow-build-info.json<br>
+ ┃ ┃ ┗ 📂resources<br>
+ ┃ ┃ ┃ ┗ 📂icons<br>
+ ┃ ┃ ┃ ┃ ┗ 📜icon.png<br>
+ ┃ ┣ 📂com<br>
+ ┃ ┃ ┣ 📂berthms<br>
+ ┃ ┃ ┃ ┣ 📂app<br>
+ ┃ ┃ ┃ ┃ ┣ 📂security<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.class<br>
+ ┃ ┃ ┃ ┃ ┗ 📜HasLogger.class<br>
+ ┃ ┃ ┃ ┣ 📂backend<br>
+ ┃ ┃ ┃ ┃ ┣ 📂controller<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂entity<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂util<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂repository<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.class<br>
+ ┃ ┃ ┃ ┃ ┗ 📂service<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.class<br>
+ ┃ ┃ ┃ ┣ 📂ui<br>
+ ┃ ┃ ┃ ┃ ┣ 📂component<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$FilterChanged.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$Model.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$SearchValueChanged.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂crud<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂exceptions<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂utils<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂messages<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📂views<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂errors<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂login<br>
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.class<br>
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.class<br>
+ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┃ ┣ 📜AdminView.class<br>
+ ┃ ┃ ┃ ┃ ┗ 📜MainView.class<br>
+ ┃ ┃ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┃ ┃ ┗ 📜Application.class<br>
+ ┃ ┃ ┗ 📜.DS_Store<br>
+ ┃ ┣ 📜.DS_Store<br>
+ ┃ ┗ 📜application.properties<br>
+ ┣ 📂frontend<br>
+ ┃ ┗ 📜generated-flow-imports.js<br>
+ ┣ 📂maven-archiver<br>
+ ┃ ┗ 📜pom.properties<br>
+ ┣ 📂maven-status<br>
+ ┃ ┗ 📂maven-compiler-plugin<br>
+ ┃ ┃ ┗ 📂compile<br>
+ ┃ ┃ ┃ ┗ 📂default-compile<br>
+ ┃ ┃ ┃ ┃ ┣ 📜createdFiles.lst<br>
+ ┃ ┃ ┃ ┃ ┗ 📜inputFiles.lst<br>
+ ┣ 📂test-classes<br>
+ ┣ 📜berth-management-system-1.0-SNAPSHOT.jar<br>
+ ┗ 📜berth-management-system-1.0-SNAPSHOT.jar.original<br>
