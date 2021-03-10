@@ -19,7 +19,6 @@ import com.berthms.ui.utils.AppConst;
 import com.berthms.backend.entity.Role;
 import com.berthms.backend.entity.User;
 import com.berthms.backend.repository.UserRepository;
-import com.berthms.ui.utils.AppConst;
 
 /**
  * Configures spring security, doing the following:
@@ -35,7 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	private static final String LOGIN_PROCESSING_URL = "/login";
 	private static final String LOGIN_FAILURE_URL = "/login?error";
 	private static final String LOGIN_URL = "/login";
-	private static final String LOGOUT_SUCCESS_URL = "/" + AppConst.PAGE_STOREFRONT;
+	private static final String LOGOUT_SUCCESS_URL = "/" + AppConst.PAGE_ROOT;
 
 	private final UserDetailsService userDetailsService;
 

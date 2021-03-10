@@ -5,6 +5,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "vessel")
+@NamedQuery(name = "VesselDets.findByVesselNameandinVoyN",
+   query = "select u from VesselDets u where u.VESSEL_NAME = ?1 and u.VOYAGE_CODE_INBOUND = ?2")
+   
+@NamedQuery(name = "VesselDets.findByVSL_VOY",
+    query = "select u from VesselDets u where u.VSL_VOY = ?1")
+
 public class VesselDets {
         @Id 
 		private String VSL_VOY; //Parameter that was used for the query
