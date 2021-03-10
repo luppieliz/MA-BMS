@@ -1,73 +1,195 @@
-# Project Base for Vaadin and Spring Boot
+# Manara Analytica's Berth Management System
 
-This is an example project that can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+## File Tree
 
+### "src" Folder
 
-## Running the Application
-There are two ways to run the application :  using `mvn spring-boot:run` or by running the `Application` class directly from your IDE.
+📦src
+ ┣ 📂main
+ ┃ ┣ 📂java
+ ┃ ┃ ┣ 📂com
+ ┃ ┃ ┃ ┣ 📂berthms
+ ┃ ┃ ┃ ┃ ┣ 📂app
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂security
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasLogger.java
+ ┃ ┃ ┃ ┃ ┣ 📂backend
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂controller
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂entity
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂util
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂repository
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂service
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.java
+ ┃ ┃ ┃ ┃ ┣ 📂ui
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂component
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂crud
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂exceptions
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂messages
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂views
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂errors
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.java
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AdminView.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MainView.java
+ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┃ ┗ 📜Application.java
+ ┃ ┃ ┃ ┗ 📜.DS_Store
+ ┃ ┃ ┗ 📜.DS_Store
+ ┃ ┣ 📂resources
+ ┃ ┃ ┣ 📂META-INF
+ ┃ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┃ ┗ 📂icons
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜icon.png
+ ┃ ┃ ┣ 📂static
+ ┃ ┃ ┃ ┗ 📂css
+ ┃ ┃ ┃ ┃ ┗ 📜.DS_Store
+ ┃ ┃ ┗ 📜application.properties
+ ┃ ┗ 📜.DS_Store
+ ┣ 📂test
+ ┃ ┗ 📜.DS_Store
+ ┗ 📜.DS_Store'
 
-You can use any IDE of your preference,but we suggest Eclipse or Intellij IDEA.
-Below are the configuration details to start the project using a `spring-boot:run` command. Both Eclipse and Intellij IDEA are covered.
-
-#### Eclipse
-- Right click on a project folder and select `Run As` --> `Maven build..` . After that a configuration window is opened.
-- In the window set the value of the **Goals** field to `spring-boot:run` 
-- You can optionally select `Skip tests` checkbox
-- All the other settings can be left to default
-
-Once configurations are set clicking `Run` will start the application
-
-#### Intellij IDEA
-- On the right side of the window, select Maven --> Plugins--> `spring-boot` --> `spring-boot:run` goal
-- Optionally, you can disable tests by clicking on a `Skip Tests mode` blue button.
-
-Clicking on the green run button will start the application.
-
-After the application has started, you can view your it at http://localhost:8080/ in your browser.
-
-
-If you want to run the application locally in the production mode, use `spring-boot:run -Pproduction` command instead.
-### Running Integration Tests
-
-Integration tests are implemented using [Vaadin TestBench](https://vaadin.com/testbench). The tests take a few minutes to run and are therefore included in a separate Maven profile. We recommend running tests with a production build to minimize the chance of development time toolchains affecting test stability. To run the tests using Google Chrome, execute
-
-`mvn verify -Pit,production`
-
-and make sure you have a valid TestBench license installed.
-
-Profile `it` adds the following parameters to run integration tests:
-```sh
--Dwebdriver.chrome.driver=path_to_driver
--Dcom.vaadin.testbench.Parameters.runLocally=chrome
-```
-
-If you would like to run a separate test make sure you have added these parameters to VM Options of JUnit run configuration
-
-## Project overview
-
-Project follow the Maven's [standard directory layout structure](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html):
-- Under the `srs/main/java` are located Application sources
-   - `Application.java` is a runnable Java application class and a starting point
-   - `GreetService.java` is a  Spring service class
-   - `MainView.java` is a default view and entry point of the application
-- Under the `srs/test` are located test files
-- `src/main/resources` contains configuration files and static resources
-- The `frontend` directory in the root folder contains client-side dependencies and resource files
-   - All CSS styles used by the application are located under the root directory `frontend/styles`    
-   - Templates would be stored under the `frontend/src`
-
-
-## More Information and Next Steps
-
-- Vaadin Basics [https://vaadin.com/docs](https://vaadin.com/docs)
-- More components at [https://vaadin.com/components](https://vaadin.com/components) and [https://vaadin.com/directory](https://vaadin.com/directory)
-- Download this and other examples at [https://vaadin.com/start](https://vaadin.com/start)
-- Using Vaadin and Spring [https://vaadin.com/docs/v14/flow/spring/tutorial-spring-basic.html](https://vaadin.com/docs/v14/flow/spring/tutorial-spring-basic.html) article
-- Join discussion and ask a question at [https://vaadin.com/forum](https://vaadin.com/forum)
-
-
-## Notes
-
-If you run application from a command line, remember to prepend a `mvn` to the command.
-"# demo" 
+ ### "target" Folder
+ 
+ 📦target
+ ┣ 📂classes
+ ┃ ┣ 📂META-INF
+ ┃ ┃ ┣ 📂VAADIN
+ ┃ ┃ ┃ ┗ 📂config
+ ┃ ┃ ┃ ┃ ┗ 📜flow-build-info.json
+ ┃ ┃ ┗ 📂resources
+ ┃ ┃ ┃ ┗ 📂icons
+ ┃ ┃ ┃ ┃ ┗ 📜icon.png
+ ┃ ┣ 📂com
+ ┃ ┃ ┣ 📂berthms
+ ┃ ┃ ┃ ┣ 📂app
+ ┃ ┃ ┃ ┃ ┣ 📂security
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConfigureUIServiceInitListener.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CustomRequestCache.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityConfiguration.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SecurityUtils.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserDetailsServiceImpl.class
+ ┃ ┃ ┃ ┃ ┗ 📜HasLogger.class
+ ┃ ┃ ┃ ┣ 📂backend
+ ┃ ┃ ┃ ┃ ┣ 📂controller
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselController.class
+ ┃ ┃ ┃ ┃ ┣ 📂entity
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂util
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EntityUtil.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractEntity.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Output.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜RestClient.http
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Role.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Vessel.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDets.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselID.class
+ ┃ ┃ ┃ ┃ ┣ 📂repository
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserRepository.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜VesselDetsRepository.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜VesselRepository.class
+ ┃ ┃ ┃ ┃ ┗ 📂service
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ApiService.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudService.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurrentDateTime.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜FilterableCrudService.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜UserFriendlyDataException.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserService.class
+ ┃ ┃ ┃ ┣ 📂ui
+ ┃ ┃ ┃ ┃ ┣ 📂component
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜OfflineBanner.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$FilterChanged.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$Model.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SearchBar$SearchValueChanged.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜SearchBar.class
+ ┃ ┃ ┃ ┃ ┣ 📂crud
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AbstractAppCrudView.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜CrudEntityDataProvider.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudEntityPresenter.class
+ ┃ ┃ ┃ ┃ ┣ 📂exceptions
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜AccessDeniedException.class
+ ┃ ┃ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂messages
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CrudErrorMessage.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AppConst.class
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜TemplateUtil.class
+ ┃ ┃ ┃ ┃ ┣ 📂views
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AdminView.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂dashboard
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜DashboardView.class
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HealthGridItem.class
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜WrapperCard.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂errors
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AccessDeniedView.class
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CustomRouteNotFoundError.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LoginView.class
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜HasNotifications.class
+ ┃ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┃ ┣ 📜AdminView.class
+ ┃ ┃ ┃ ┃ ┗ 📜MainView.class
+ ┃ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┃ ┗ 📜Application.class
+ ┃ ┃ ┗ 📜.DS_Store
+ ┃ ┣ 📜.DS_Store
+ ┃ ┗ 📜application.properties
+ ┣ 📂frontend
+ ┃ ┗ 📜generated-flow-imports.js
+ ┣ 📂maven-archiver
+ ┃ ┗ 📜pom.properties
+ ┣ 📂maven-status
+ ┃ ┗ 📂maven-compiler-plugin
+ ┃ ┃ ┗ 📂compile
+ ┃ ┃ ┃ ┗ 📂default-compile
+ ┃ ┃ ┃ ┃ ┣ 📜createdFiles.lst
+ ┃ ┃ ┃ ┃ ┗ 📜inputFiles.lst
+ ┣ 📂test-classes
+ ┣ 📜berth-management-system-1.0-SNAPSHOT.jar
+ ┗ 📜berth-management-system-1.0-SNAPSHOT.jar.original
