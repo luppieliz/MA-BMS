@@ -24,7 +24,7 @@ public class LoginView extends LoginOverlay
 	public LoginView() {
 		LoginI18n i18n = LoginI18n.createDefault();
 		i18n.setHeader(new LoginI18n.Header());
-		i18n.getHeader().setTitle("Manara Analytica");
+		i18n.getHeader().setTitle("YOUR MUM");
 		i18n.getHeader().setDescription(
 			"Berth Management System");
 		i18n.setAdditionalInformation(null);
