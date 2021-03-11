@@ -23,13 +23,13 @@ import com.berthms.backend.entity.Role;
 import com.berthms.backend.entity.User;
 import com.berthms.backend.service.UserService.UserService;
 import com.berthms.ui.MainView;
-import com.berthms.ui.crud.AbstractAppCrudView;
+import com.berthms.ui.crud.User.UserAbstractAppCrudView;
 import com.berthms.ui.utils.AppConst;
 
 @Route(value = PAGE_USERS, layout = MainView.class)
 @PageTitle(AppConst.TITLE_USERS)
 @Secured(Role.ADMIN)
-public class AdminView extends AbstractAppCrudView<User> {
+public class AdminView extends UserAbstractAppCrudView<User> {
 
 	@Autowired
 	public AdminView(UserService service, CurrentUser currentUser, PasswordEncoder passwordEncoder) {

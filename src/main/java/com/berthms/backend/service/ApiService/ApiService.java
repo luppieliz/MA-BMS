@@ -29,12 +29,12 @@ public class ApiService {
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-	@Scheduled(cron = "0 * * * * ?")
-	public void reportCurrentTime() {
-		log.info("{}: This is a minute message from apiService", dateFormat.format(new Date()));
-        CurrentDateTime current = new CurrentDateTime();
-        log.info("{\"dateFrom\": " + "\"" + current.currentDate() + "\""+  ", \"dateTo\":" + "\"" + current.oneWeek() + "\"}");
-    }
+	// @Scheduled(cron = "0 * * * * ?")
+	// public void reportCurrentTime() {
+	// 	log.info("{}: This is a minute message from apiService", dateFormat.format(new Date()));
+    //     CurrentDateTime current = new CurrentDateTime();
+    //     log.info("{\"dateFrom\": " + "\"" + current.currentDate() + "\""+  ", \"dateTo\":" + "\"" + current.oneWeek() + "\"}");
+    // }
 
     @Autowired
     VesselRepository vesselRepository;
@@ -138,10 +138,10 @@ public class ApiService {
     }
 
     
-	@Scheduled(cron = "0 36 17 * * ?")
-	public void scheduledPostData() {
-        postData();
-		log.info("{}: Post data successfully ran.", dateFormat.format(new Date()));
-    }
+	// @Scheduled(cron = "0 36 17 * * ?")
+	// public void scheduledPostData() {
+    //     postData();
+	// 	log.info("{}: Post data successfully ran.", dateFormat.format(new Date()));
+    // }
 
 }

@@ -39,7 +39,9 @@ public class Vessel implements Serializable{
 
 	public Vessel(){}
 
-
+	public VesselID getVesselID(){
+		return new VesselID(this.abbrVslM, this.inVoyN);
+	}
 	
 	public String getAbbrVslM() {
 		return abbrVslM;

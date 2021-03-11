@@ -4,7 +4,7 @@ import javax.persistence.EntityNotFoundException;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.berthms.backend.entity.AbstractEntity;
+
 import com.berthms.backend.entity.VesselDets;
 
 public interface VesselDetsCrudService<T> {

@@ -13,7 +13,7 @@ import com.berthms.backend.repository.VesselDetsRepository;
 import com.berthms.backend.repository.VesselDetsRepository;
 
 @Service
-public class VesselDetsService implements FilterableCrudService<VesselDets> {
+public class VesselDetsService implements VesselDetsFilterableCrudService<VesselDets> {
 
 	public static final String MODIFY_LOCKED_VesselDets_NOT_PERMITTED = "VesselDets has been locked and cannot be modified or deleted";
 	private static final String DELETING_SELF_NOT_PERMITTED = "You cannot delete your own account";
@@ -44,7 +44,7 @@ public class VesselDetsService implements FilterableCrudService<VesselDets> {
 	@Transactional
 	public void delete(VesselDets currentVessel, VesselDets VesselDetsToDelete) {
 		
-		FilterableCrudService.super.delete(currentVessel, VesselDetsToDelete);
+		VesselDetsFilterableCrudService.super.delete(currentVessel, VesselDetsToDelete);
 	}
 
 	

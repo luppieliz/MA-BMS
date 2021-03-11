@@ -12,7 +12,7 @@ import com.berthms.backend.entity.User;
 import com.berthms.backend.repository.UserRepository;
 
 @Service
-public class UserService implements FilterableCrudService<User> {
+public class UserService implements UserFilterableCrudService<User> {
 
 	public static final String MODIFY_LOCKED_USER_NOT_PERMITTED = "User has been locked and cannot be modified or deleted";
 	private static final String DELETING_SELF_NOT_PERMITTED = "You cannot delete your own account";
@@ -65,7 +65,7 @@ public class UserService implements FilterableCrudService<User> {
 	public void delete(User currentUser, User userToDelete) {
 		throwIfDeletingSelf(currentUser, userToDelete);
 		throwIfUserLocked(userToDelete);
-		FilterableCrudService.super.delete(currentUser, userToDelete);
+		UserFilterableCrudService.super.delete(currentUser, userToDelete);
 	}
 
 	private void throwIfDeletingSelf(User currentUser, User user) {
