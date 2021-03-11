@@ -1,9 +1,9 @@
 {
   "compatibilityMode": false,
   "productionMode": false,
-  "npmFolder": "C:\\Users\\kengs\\OneDrive\\Documents\\CS102\\From Jayden\\MA-BMS",
-  "generatedFolder": "C:\\Users\\kengs\\OneDrive\\Documents\\CS102\\From Jayden\\MA-BMS\\target\\frontend",
-  "frontendFolder": "C:\\Users\\kengs\\OneDrive\\Documents\\CS102\\From Jayden\\MA-BMS\\frontend",
+  "npmFolder": "/Users/jayden/Documents/Projects/MA-BMS",
+  "generatedFolder": "/Users/jayden/Documents/Projects/MA-BMS/target/frontend",
+  "frontendFolder": "/Users/jayden/Documents/Projects/MA-BMS/frontend",
   "pnpm.enable": false,
   "require.home.node": false
 }
